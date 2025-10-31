@@ -1,0 +1,90 @@
+/* ======== GENERAL ======== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #e6f4ea 0%, #c5ebd4 100%);
+  color: #1d4022;
+}
+
+/* ======== IFREAMES ======== */
+.header-frame,
+.footer-frame {
+  display: block;
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  background: transparent; /* hace que se integre visualmente */
+}
+
+/* ======== HEADER FIJO ======== */
+.header-frame {
+  top: 0;
+  left: 0;
+  height: 120px; /* altura del header */
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+/* ======== CONTENIDO ======== */
+.contenido-principal {
+  flex: 1 0 auto;
+  margin-top: 122px;
+  background-color: #f9fff9;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 80, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  color: #275c33;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+/* ======== PIE ======== */
+.footer-frame {
+  height: 180px;
+  flex-shrink: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e3f5e9;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== SCROLLBAR PERSONALIZADA ======== */
+.contenido-principal::-webkit-scrollbar {
+  width: 8px;
+}
+.contenido-principal::-webkit-scrollbar-thumb {
+  background-color: #80b98c;
+  border-radius: 10px;
+}
+.contenido-principal::-webkit-scrollbar-thumb:hover {
+  background-color: #5e9c6f;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .header-frame {
+    height: 140px;
+  }
+
+  .contenido-principal {
+    margin-top: 150px;
+    padding: 1.5rem;
+  }
+
+  .footer-frame {
+    height: 200px;
+  }
+}

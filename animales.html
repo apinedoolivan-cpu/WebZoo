@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animales - MiniZoo</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" type="image/x-icon" href="iconos/favicon.ico" />
+
+        <style>
+            /* Estilo del canguro y animación personalizada */
+            #canguro {
+            width: 130px;
+            margin-top: 40px;
+            animation: saltoCanguro 4s ease-in-out 1 forwards;
+            }
+
+            @keyframes saltoCanguro {
+            0% { transform: translateX(0) translateY(0); opacity: 1; }
+            25% { transform: translateX(25vw) translateY(-60px); }
+            50% { transform: translateX(50vw) translateY(0); }
+            75% { transform: translateX(75vw) translateY(-60px); }
+            100% { transform: translateX(100vw) translateY(0); opacity: 0; }
+            }
+
+            /* Carrusel oculto al inicio */
+            #carruselAnimales {
+            opacity: 0;
+            animation: mostrarCarrusel 1s ease-in-out 4s forwards;
+            }
+
+            @keyframes mostrarCarrusel {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="cabecera.html" class="header-frame" scrolling="no"></iframe>
+
+        <main class="container my-5 text-center position-relative">
+            <h2 class="text-success fw-bold mb-4">Animales Favoritos de los Niños 🐾</h2>
+
+            <!-- Canguro animado -->
+            <div class="d-flex justify-content-start">
+            <img src="img/animales/canguro.png" id="canguro" alt="Canguro saltando">
+            </div>
+
+            <!-- Carrusel Bootstrap -->
+            <div id="carruselAnimales" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-4 shadow-lg">
+                <div class="carousel-item active">
+                <img src="img/animales/leon.jpg" class="d-block w-100" alt="León">
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
+                    <h5>León</h5>
+                    <p>El <em>rey de la selva</em>. Vive en la <a href="ecosistemas.html" class="text-warning text-decoration-underline">sabana africana</a>.</p>
+                </div>
+                </div>
+
+                <div class="carousel-item">
+                <img src="img/animales/elefante.jpg" class="d-block w-100" alt="Elefante">
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
+                    <h5>Elefante</h5>
+                    <p>El <strong>mamífero terrestre más grande</strong>. Tiene una trompa increíblemente hábil.</p>
+                </div>
+                </div>
+
+                <div class="carousel-item">
+                <img src="img/animales/pinguino.jpg" class="d-block w-100" alt="Pingüino">
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-2">
+                    <h5>Pingüino</h5>
+                    <p>Habita en los <a href="ecosistemas.html" class="text-warning text-decoration-underline">ecosistemas polares</a>. Aunque no vuela, ¡nada como un campeón!</p>
+                </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselAnimales" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselAnimales" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+
+            <!-- Curiosidades -->
+            <section class="mt-5 text-start bg-light p-4 rounded shadow-sm">
+            <h3 class="text-success">Cosas curiosas 🧐</h3>
+            <p>¿Sabías que los <em>delfines</em> tienen nombres únicos para reconocerse entre ellos?</p>
+            <p>El <u>camaleón</u> no cambia de color solo por camuflaje, sino también para expresar emociones.</p>
+            <blockquote class="blockquote text-center mt-3">
+                <p class="mb-0">“Los animales son los amigos más agradables: no hacen preguntas, no critican.”</p>
+                <footer class="blockquote-footer">George Eliot</footer>
+            </blockquote>
+            </section>
+        </main>
+
+        <iframe src="pie.html" class="footer-frame" scrolling="no"></iframe>
+
+        <!-- Bootstrap JS solo para el carrusel -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
