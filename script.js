@@ -1,4 +1,4 @@
-function cargarEstructura() {
+function cargarCabeceraYPie() {
   fetch("cabecera.html")
     .then(r => r.text())
     .then(h => (document.getElementById("cabecera").innerHTML = h));
@@ -7,16 +7,24 @@ function cargarEstructura() {
     .then(h => (document.getElementById("pie").innerHTML = h));
 }
 
-function animarCanguro() {
-  // animación para animales.html
-}
+function activarValidacionFormularios() {
+  let forms = document.querySelectorAll(".needs-validation");
 
-function validarFormulario() {
-  // validación para operarios.html
+  forms.forEach(form => {
+    form.addEventListener("submit", event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    }, false);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  cargarEstructura();
-  if (document.body.classList.contains("pagina-animales")) animarCanguro();
-  if (document.body.classList.contains("pagina-operarios")) validarFormulario();
+  cargarCabeceraYPie();
+
+  if (document.querySelector(".needs-validation")) {
+    activarValidacionFormularios();
+  }
 });
