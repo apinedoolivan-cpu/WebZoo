@@ -1,90 +1,88 @@
-/* ======== GENERAL ======== */
+:root {
+  --color-primario: #155c2f;
+  --color-primario-oscuro: #1e5c32;
+  --color-secundario: #2e8a4f;
+  --color-fondo: #e6f4ea;
+  --color-fondo-secundario: #c5ebd4;
+  --color-blanco: #f9fff9;
+  --color-texto: #1d4022;
+  --color-texto-secundario: #275c33;
+  --color-hover: #b6f0c2;
+  --color-footer-texto-hover: #dfffe5;
+  --sombra-suave: 0 0 10px rgba(0, 80, 0, 0.1);
+  --fuente-principal: "Segoe UI", sans-serif;
+  --radio-borde: 15px;
+  --altura-header: 130px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #e6f4ea 0%, #c5ebd4 100%);
-  color: #1d4022;
+  font-family: var(--fuente-principal);
+  background: linear-gradient(180deg, var(--color-fondo) 0%, var(--color-fondo-secundario) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color-texto);
 }
 
-/* ======== IFREAMES ======== */
-.header-frame,
-.footer-frame {
-  display: block;
-  width: 100%;
-  border: none;
-  overflow: hidden;
-  background: transparent; /* hace que se integre visualmente */
+header.navbar {
+  background-color: var(--color-primario) !important;
 }
 
-/* ======== HEADER FIJO ======== */
-.header-frame {
-  top: 0;
-  left: 0;
-  height: 120px; /* altura del header */
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  background-color: #ffffff;
+header .navbar-brand span,
+header .nav-link {
+  color: var(--color-blanco) !important;
 }
 
-/* ======== CONTENIDO ======== */
+header .nav-link:hover {
+  color: var(--color-hover) !important;
+}
+
 .contenido-principal {
-  flex: 1 0 auto;
-  margin-top: 122px;
-  background-color: #f9fff9;
-  border-radius: 15px;
+  margin-top: var(--altura-header);
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-borde);
   padding: 2rem;
-  box-shadow: 0 0 10px rgba(0, 80, 0, 0.1);
+  box-shadow: var(--sombra-suave);
   margin-bottom: 2rem;
-  max-width: 1200px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.border-success-subtle:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
 }
 
 p {
-  color: #275c33;
+  color: var(--color-texto-secundario);
   line-height: 1.7;
-  margin-bottom: 1.2rem;
 }
 
-/* ======== PIE ======== */
-.footer-frame {
-  height: 180px;
-  flex-shrink: 0;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #e3f5e9;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+footer {
+  background: linear-gradient(90deg, var(--color-primario-oscuro) 0%, var(--color-secundario) 100%);
+  color: var(--color-blanco);
 }
 
-/* ======== SCROLLBAR PERSONALIZADA ======== */
-.contenido-principal::-webkit-scrollbar {
-  width: 8px;
-}
-.contenido-principal::-webkit-scrollbar-thumb {
-  background-color: #80b98c;
-  border-radius: 10px;
-}
-.contenido-principal::-webkit-scrollbar-thumb:hover {
-  background-color: #5e9c6f;
+footer a:hover {
+  color: var(--color-footer-texto-hover) !important;
+  transform: scale(1.1);
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-/* ======== RESPONSIVE ======== */
+footer img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
-  .header-frame {
-    height: 140px;
-  }
-
   .contenido-principal {
-    margin-top: 150px;
-    padding: 1.5rem;
+    margin-top: calc(var(--altura-header) + 20px);
   }
 
-  .footer-frame {
-    height: 200px;
+  footer {
+    flex-direction: column;
+    text-align: center;
   }
 }

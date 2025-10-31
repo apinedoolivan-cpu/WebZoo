@@ -3,41 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MiniZoo - Home</title>
+  <title>MiniZoo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/x-icon" href="iconos/favicon.ico" />
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-  <!-- CABECERA -->
   <div id="cabecera"></div>
 
-  <!-- CONTENIDO -->
   <main class="flex-fill container contenido-principal">
     <h2 class="text-success fw-bold mb-3">Bienvenidos a MiniZoo 🐾</h2>
     <p>Explora los ecosistemas, conoce a nuestros operarios y descubre curiosidades de tus animales favoritos.</p>
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <p>
+            MiniZoo es un lugar mágico donde la naturaleza y la diversión se encuentran. Aquí los más pequeños pueden 
+            aprender sobre los animales del mundo, sus hábitats y las curiosidades más asombrosas que esconden.
+          </p>
+          <p>
+            Cada rincón de nuestro zoo está pensado para despertar la curiosidad y el respeto por la vida animal. 
+            Desde los ecosistemas tropicales hasta los desiertos más cálidos, nuestros visitantes descubrirán la 
+            increíble diversidad del planeta.
+          </p>
+          <p>
+            Además, nuestro equipo de <strong>operarios expertos</strong> cuida de cada especie con amor y compromiso. 
+            Participa en nuestros <em>talleres educativos</em>, explora los <strong class="text-success fw-semibold text-decoration-none">ecosistemas</strong> 
+            y déjate sorprender por los <strong class="text-success fw-semibold text-decoration-none">animales más divertidos</strong> del zoo.
+          </p>
+          <a href="animales.html" class="btn btn-success btn-lg mt-3 mb-4">Conoce a nuestros animales</a>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="img/ninos-visitando.jpg" alt="Niños en el zoo" class="img-fluid rounded-4 shadow-sm">
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- PIE -->
+  <section class="bg-success bg-opacity-10 py-5 text-center">
+    <div class="container">
+      <h3 class="text-success fw-bold mb-4">Ven a conocernos</h3>
+      <p class="text-muted fs-5 mx-auto mb-4" style="max-width: 700px;">
+        ¡Estamos abiertos todos los días de <strong>9:00 a 18:00</strong>!  
+        Disfruta de nuestras visitas guiadas, talleres educativos y actividades para toda la familia.
+        Ven y vive la experiencia del <em>MiniZoo</em>, donde la diversión se une con el amor por la naturaleza.
+      </p>
+
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <div class="card border-0 shadow-sm p-3 bg-white rounded-4" style="width: 18rem;">
+          <div class="card-body">
+            <i class="bi bi-geo-alt-fill text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold text-success">¿Dónde estamos?</h5>
+            <p class="text-muted mb-0">Calle Safari Verde, nº 12<br>Ciudad Natural</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm p-3 bg-white rounded-4" style="width: 18rem;">
+          <div class="card-body">
+            <i class="bi bi-calendar-week-fill text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold text-success">Horarios</h5>
+            <p class="text-muted mb-0">Abiertos todos los días<br>de 9:00 a 18:00</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm p-3 bg-white rounded-4" style="width: 18rem;">
+          <div class="card-body">
+            <i class="bi bi-telephone-fill text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold text-success">Contáctanos</h5>
+            <p class="text-muted mb-0">Tel: 999 123 456<br>Email: info@minizoo.com</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn-success btn-lg px-5 mt-5">Contáctanos</a>
+    </div>
+  </section>
+
+  <section class="text-center my-5">
+    <h3 class="text-success fw-bold mb-4">Explora MiniZoo</h3>
+    <div class="container">
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-4">
+          <div class="border border-success-subtle rounded-4 p-4 shadow-sm h-100 bg-white">
+            <i class="bi bi-people-fill text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold text-success">Nuestros Operarios</h5>
+            <p class="text-muted">
+              Conoce al equipo que cuida con cariño de todos nuestros animales.
+            </p>
+            <a href="operarios.html" class="btn btn-outline-success fw-semibold px-4">Ver más</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="border border-success-subtle rounded-4 p-4 shadow-sm h-100 bg-white">
+            <i class="bi bi-globe-americas text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold text-success">Ecosistemas</h5>
+            <p class="text-muted">
+              Explora los distintos hábitats del planeta: selva, desierto, océano y más.
+            </p>
+            <a href="ecosistemas.html" class="btn btn-outline-success fw-semibold px-4">Explorar</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="border border-success-subtle rounded-4 p-4 shadow-sm h-100 bg-white">
+            <i class="bi bi-paw-fill text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold text-success">Animales</h5>
+            <p class="text-muted">
+              Descubre curiosidades divertidas sobre los animales más queridos del zoo.
+            </p>
+            <a href="animales.html" class="btn btn-outline-success fw-semibold px-4">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light rounded p-4 shadow-sm">
+    <h3 class="text-success fw-bold mb-3 text-center">¿Sabías que...?</h3>
+    <ul class="list-unstyled fs-5 text-success">
+      <li>🦒 La lengua de la jirafa puede medir hasta <em>50 cm</em> de largo.</li>
+      <li>🐘 Los elefantes pueden reconocerse en un espejo, igual que nosotros.</li>
+      <li>🦜 Los loros pueden aprender más de <strong>100 palabras</strong>.</li>
+      <li>🐧 Los pingüinos tienen una pareja para toda la vida ❤️.</li>
+    </ul>
+  </section>
+
+  <section class="text-center mt-5">
+    <blockquote class="blockquote text-success fst-italic">
+      “Cuidar la naturaleza es cuidar nuestro futuro.” 🌎
+    </blockquote>
+  </section>
+
   <div id="pie"></div>
 
-  <script>
-    // Cargar los fragmentos HTML directamente sin iframe
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("cabecera.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("cabecera").innerHTML = data;
-        });
-
-      fetch("pie.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("pie").innerHTML = data;
-        });
-    });
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
