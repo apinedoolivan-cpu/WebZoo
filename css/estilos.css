@@ -55,6 +55,20 @@ header .nav-link:hover {
   transition: transform 0.3s ease;
 }
 
+.ecosistema-texto {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.ecosistema-texto::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #2d6a4f;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "UnifrakturCook", "Old English Text MT", cursive;
+}
+
 p {
   color: var(--color-texto-secundario);
   line-height: 1.7;
