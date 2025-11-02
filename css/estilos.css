@@ -69,6 +69,24 @@ header .nav-link:hover {
   font-family: "UnifrakturCook", "Old English Text MT", cursive;
 }
 
+@keyframes saltarCanguro {
+  0%   { left: 100%; top: 90%;  transform: rotate(15deg); opacity: 1; }
+  10%  { left: 90%;  top: 40%;  transform: rotate(-10deg); opacity: 1; }
+  20%  { left: 80%;  top: 100%; transform: rotate(10deg); opacity: 1; }
+  30%  { left: 70%;  top: 30%;  transform: rotate(-5deg); opacity: 1; }
+  40%  { left: 60%;  top: 95%;  transform: rotate(8deg); opacity: 1; }
+  50%  { left: 50%;  top: 25%;  transform: rotate(-12deg); opacity: 1; }
+  60%  { left: 40%;  top: 90%;  transform: rotate(10deg); opacity: 1; }
+  70%  { left: 30%;  top: 35%;  transform: rotate(-8deg); opacity: 1; }
+  80%  { left: 20%;  top: 85%;  transform: rotate(12deg); opacity: 1; }
+  90%  { left: 10%;  top: 40%;  transform: rotate(-10deg); opacity: 1; }
+  100% { left: -10%; top: 100%; transform: rotate(-15deg); opacity: 0; }
+}
+.canguro{
+  margin-top: 80px;
+  width: 600px;
+}
+
 p {
   color: var(--color-texto-secundario);
   line-height: 1.7;
