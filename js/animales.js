@@ -27,7 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
     info.innerHTML = descripciones[nombre];
   });
 
-  document.querySelectorAll(".selector-animal").forEach((img, index) => {
-    img.addEventListener("click", () => carousel.to(index));
-  });
+  let miniaturas = Array.from(document.querySelectorAll('.selector-animal'));
+  let index = 0;
+  for (const img of miniaturas) {
+    let currentIndex = index;
+    img.addEventListener("click", () => {
+      carousel.to(currentIndex);
+      miniaturas.forEach(m => m.classList.remove('activo'));
+      img.classList.add('activo');
+    });
+    index++;
+  }
 });
